@@ -4,11 +4,7 @@ import './Die.css';
 class Die extends Component {
   render(){
     
-    return(
-      <div className="Die">
-        <i className={`Die-icon fas fa-dice-${this.props.dieFace}`}></i>
-      </div>
-    )
+    return (<i className={`Die fas fa-dice-${this.props.dieFace}`}></i>)
   }
 }
 

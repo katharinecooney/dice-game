@@ -21,4 +21,5 @@
 
 .RollDice-button:hover {
   background-color: rgba(117, 38, 207, 0.819);
+  cursor: pointer;
 }

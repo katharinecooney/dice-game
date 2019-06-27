@@ -23,8 +23,11 @@ class RollDice extends Component {
       isRolling: true,
       die1: this.props.dice[randomIndex1],
       die2: this.props.dice[randomIndex2]
-    })
-    ;
+    });
+    // wait one second, then reset isRolling to false
+    setTimeout(() => {
+      this.setState({isRolling: false})
+    }, 1000);
   }
 
   render(){
@@ -35,7 +38,12 @@ class RollDice extends Component {
           <Die dieFace={this.state.die1}/>
           <Die dieFace={this.state.die2}/>
         </div>
-        <button className="RollDice-button" onClick={this.roll}>Roll Dice</button>
+        <button 
+          className="RollDice-button" 
+          onClick={this.roll}
+          disabled={this.state.isRolling}>
+            {this.state.isRolling ? "Rolling..." : "Roll Dice!"}
+        </button>
       </div>
     )
   }
