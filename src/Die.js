@@ -8,9 +8,11 @@ class Die extends Component {
 
   render(){
     let dieFace = this.props.dieFace;
-    let dice = `fas fa-dice-${dieFace}`;
+    let dice = `fas fa-dice-${dieFace} Die-icon`;
     return(
-      <i className={dice}></i>
+      <div className="Die">
+        <i className={dice}></i>
+      </div>
     )
   }
 }
